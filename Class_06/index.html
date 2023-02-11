@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Basic | Mouse Event</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<style>
+    .box{
+        display: inline-block;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    
+        background-color: burlywood;
+    }
+</style>
+<body>
+<div id="app">
+    <div class="box" @mouseover="handleMouse">Mouse Over</div>
+    <div class="box" @mouseleave="handleMouse">Mouse Leave</div>
+    <div class="box" @dblClick="handleMouse">Mouse Double CLick</div>
+    <div class="box" @mousemove="handleMouseMove">Mouse Move. Position: {{ x }} - {{ y}} </div>
+</div>
+<script src="app.js"></script>
+</body>
