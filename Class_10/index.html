@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue Basic | Dynamic Classes</title>
+    <title>Vue Basic | Attribute-Binding + Home Work</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <style>
@@ -21,7 +21,7 @@
     <!-- Attribute-Binding -->
     <a v-bind:href="url">Google</a>
 
-    <div v-for="book in books" :class="{ fav: book.isFav }">
+    <div v-for="book in books" :class="{ fav: book.isFav }" @click ="toggleFav(book)">
         <div class="product">
             <img :src="book.image" :alt="book.name">
             <h2> {{ book.name }}</h2>
