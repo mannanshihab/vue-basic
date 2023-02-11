@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Basic | V-For</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <ul>
+        <!-- loop-->
+        <h1>Loop</h1>
+        <li v-for="book in books" >
+            {{ book.id }} - {{ book.name }} 
+        </li>
+        <!-- select by id -->
+        <h1>Select by ID</h1>
+        <li v-for="book in books" :key="book.id">
+            {{ book.id }} - {{ book.name }} - {{ book.author }}
+        </li>
+
+        <!-- select by index -->
+        <h1>Select by Index</h1>
+        <li v-for="(book, index) in books" :key="book.index">
+            {{ book.name }} - {{ book.author }} - {{ index }}
+        </li>
+    </ul>
+</div>
+<script src="app.js"></script>
+</body>
